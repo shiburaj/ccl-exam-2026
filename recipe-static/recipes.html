@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes | Delicious Recipes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>All Recipes</h1>
+            <p>Browse our collection of delicious dishes</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html" class="active">All Recipes</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="filter-section">
+            <input type="text" id="search" placeholder="Search recipes...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="main">Main Dishes</option>
+                <option value="bakery">Bakery</option>
+                <option value="salad">Salads</option>
+                <option value="dessert">Desserts</option>
+            </select>
+        </div>
+
+        <div class="recipe-list" id="recipe-list">
+            <!-- Recipes will be loaded here by JavaScript -->
+        </div>
+
+        <section class="full-recipes">
+            <!-- Detailed recipes with anchors -->
+            <article id="spaghetti" class="recipe-detail">
+                <h2>Spaghetti Carbonara</h2>
+                
+                <div class="recipe-meta">
+                    <span><i class="far fa-clock"></i> 25 mins</span>
+                    <span><i class="fas fa-utensils"></i> Main Dish</span>
+                    <span><i class="fas fa-user-friends"></i> Serves 4</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>400g spaghetti</li>
+                        <li>200g pancetta or guanciale, diced</li>
+                        <li>4 large eggs</li>
+                        <li>50g pecorino cheese, grated</li>
+                        <li>50g parmesan, grated</li>
+                        <li>Freshly ground black pepper</li>
+                        <li>Salt</li>
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Bring a large pot of salted water to boil and cook spaghetti according to package instructions.</li>
+                        <li>While pasta cooks, fry pancetta in a large pan until crispy.</li>
+                        <li>In a bowl, whisk eggs and mix in grated cheeses and plenty of black pepper.</li>
+                        <li>Drain pasta, reserving a cup of pasta water, and immediately add to the pan with pancetta.</li>
+                        <li>Remove from heat and quickly stir in egg mixture, adding pasta water as needed to create a creamy sauce.</li>
+                        <li>Serve immediately with extra grated cheese and pepper.</li>
+                    </ol>
+                </div>
+            </article>
+
+            <article id="cookies" class="recipe-detail">
+                <h2>Chocolate Chip Cookies</h2>
+                
+                <div class="recipe-meta">
+                    <span><i class="far fa-clock"></i> 35 mins</span>
+                    <span><i class="fas fa-bread-slice"></i> Bakery</span>
+                    <span><i class="fas fa-user-friends"></i> Makes 24</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>250g all-purpose flour</li>
+                        <li>1/2 tsp baking soda</li>
+                        <li>170g unsalted butter, melted</li>
+                        <li>200g brown sugar</li>
+                        <li>100g white sugar</li>
+                        <li>1 tbsp vanilla extract</li>
+                        <li>1 egg</li>
+                        <li>1 egg yolk</li>
+                        <li>300g chocolate chips</li>
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Preheat oven to 165°C (325°F). Line baking sheets with parchment paper.</li>
+                        <li>Sift together flour and baking soda; set aside.</li>
+                        <li>Cream together melted butter, brown sugar, and white sugar until well blended.</li>
+                        <li>Beat in vanilla, egg, and egg yolk until light and creamy.</li>
+                        <li>Mix in sifted ingredients until just blended.</li>
+                        <li>Stir in chocolate chips by hand.</li>
+                        <li>Drop cookie dough by tablespoonfuls onto prepared baking sheets.</li>
+                        <li>Bake for 15-17 minutes or until edges are lightly toasted.</li>
+                        <li>Cool on baking sheets for a few minutes before transferring to wire racks.</li>
+                    </ol>
+                </div>
+            </article>
+
+            <!-- Add more recipes following the same structure -->
+        </section>
+    </main>
+
+    <footer id="about">
+        <div class="container">
+            <p>&copy; 2023 Delicious Recipes. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

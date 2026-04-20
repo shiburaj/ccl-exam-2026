@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Recipe App</h1>
+        <a href="/add-recipe" class="button">Add New Recipe</a>
+    </header>
+    
+    <main>
+        <% if (recipes.length > 0) { %>
+            <div class="recipe-grid">
+                <% recipes.forEach(recipe => { %>
+                    <div class="recipe-card">
+                        <h2><%= recipe.title %></h2>
+                        <p><strong>Ingredients:</strong> <%= recipe.ingredients.join(', ') %></p>
+                        <div class="actions">
+                            <a href="/recipe/<%= recipe.id %>" class="button">View</a>
+                            <a href="/edit-recipe/<%= recipe.id %>" class="button">Edit</a>
+                            <form action="/delete-recipe/<%= recipe.id %>" method="POST">
+                                <button type="submit" class="button delete">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p>No recipes found. Add your first recipe!</p>
+        <% } %>
+    </main>
+</body>
+</html>

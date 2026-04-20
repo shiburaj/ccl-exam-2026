@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= recipe.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><%= recipe.title %></h1>
+        <a href="/" class="button">Back to All Recipes</a>
+    </header>
+    
+    <main class="recipe-detail">
+        <section>
+            <h2>Ingredients</h2>
+            <ul>
+                <% recipe.ingredients.forEach(ingredient => { %>
+                    <li><%= ingredient %></li>
+                <% }); %>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Instructions</h2>
+            <p><%= recipe.instructions %></p>
+        </section>
+        
+        <div class="actions">
+            <a href="/edit-recipe/<%= recipe.id %>" class="button">Edit Recipe</a>
+            <form action="/delete-recipe/<%= recipe.id %>" method="POST">
+                <button type="submit" class="button delete">Delete Recipe</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
