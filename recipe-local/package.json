@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "A simple recipe app",
   "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shiburaj",
